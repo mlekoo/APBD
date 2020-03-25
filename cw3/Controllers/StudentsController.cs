@@ -1,5 +1,5 @@
 ﻿using System;
-using Cw3.DAL;
+using cw3.DAL;
 using Cw3.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -24,11 +24,11 @@ namespace Cw3.Controllers
         [HttpGet("{id}")]
         public IActionResult GetStudent(int id)
         {
-            if(id == 1)
+            if (id == 1)
             {
                 return Ok("Tolin");
             }
-            else if(id == 2)
+            else if (id == 2)
             {
                 return Ok("Tybrel");
             }
@@ -39,6 +39,13 @@ namespace Cw3.Controllers
             return NotFound("Nie znaleziono studenta...");
         }
 
+        [HttpGet("getStudentEnrollment/{id}")]
+        public IActionResult getStudentEnrollment(string id)
+        {
+            return Ok(_dbService.GetStudentEnrollment(id));
+        }
+
+
         [HttpPost]
         public IActionResult CreateStudent(Student student)
         {
@@ -48,7 +55,7 @@ namespace Cw3.Controllers
 
         [HttpPut("{id}")]
         public IActionResult PutStudent(int id)
-        {         
+        {
             return Ok("Student zaktualizowany");
         }
 
