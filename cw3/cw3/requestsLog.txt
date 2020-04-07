@@ -1,0 +1,8 @@
+Method: GET
+Path: /api/students
+Body: 
+{
+	"firstName": "Kacper"
+}
+QueryString: 
+

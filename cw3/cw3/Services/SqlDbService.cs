@@ -18,7 +18,7 @@ namespace cw3.DAL
 
         public IEnumerable<Student> GetStudents()
         {
-            using (var client = new SqlConnection("Data Source=db-mssql;Initial Catalog=s18730;Integrated Security=True"))
+            using (var client = new SqlConnection("Data Source=db-mssql;Initial Catalog=s19017;Integrated Security=True"))
             using (var com = new SqlCommand())
             {
                 _students.Clear();
@@ -43,7 +43,7 @@ namespace cw3.DAL
         }
         public IEnumerable<Enrollment> GetEnrollment(string index)
         {
-            using (var client = new SqlConnection("Data Source=db-mssql;Initial Catalog=s18730;Integrated Security=True"))
+            using (var client = new SqlConnection("Data Source=db-mssql;Initial Catalog=s19017;Integrated Security=True"))
             using (var com = new SqlCommand())
             {
                 com.Connection = client;
@@ -100,7 +100,7 @@ namespace cw3.DAL
 
         public Student GetStudent(string index)
         {
-            using (var client = new SqlConnection("Data Source=db-mssql;Initial Catalog=s18730;Integrated Security=True"))
+            using (var client = new SqlConnection("Data Source=db-mssql;Initial Catalog=s19017;Integrated Security=True"))
             using (var com = new SqlCommand())
             {
                 _students.Clear();
@@ -134,7 +134,7 @@ namespace cw3.DAL
                 studies = request.studies
             };
 
-            using(var con = new SqlConnection("Data Source=db-mssql;Initial Catalog=s18730;Integrated Security=True"))
+            using(var con = new SqlConnection("Data Source=db-mssql;Initial Catalog=s19017;Integrated Security=True"))
             using(var com = new SqlCommand())
             {
                 com.Connection = con;
@@ -212,7 +212,7 @@ namespace cw3.DAL
         }
         public IActionResult PromoteStudent(PromoteStudentRequest request)
         {
-            using (var con = new SqlConnection("Data Source=db-mssql;Initial Catalog=s18730;Integrated Security=True"))
+            using (var con = new SqlConnection("Data Source=db-mssql;Initial Catalog=s19017;Integrated Security=True"))
             using (var com = new SqlCommand())
             {
                 com.Connection = con;
@@ -250,6 +250,35 @@ namespace cw3.DAL
                     tran.Rollback();
                     return BadRequest(e);
                 }
+            }
+        }
+
+
+        public static bool CheckIndex(string index) {
+
+            using (var con = new SqlConnection("Data Source=db-mssql;Initial Catalog=s19017;Integrated Security=True"))
+            using (var com = new SqlCommand())
+            {
+                com.Connection = con;
+                con.Open();
+                var tran = con.BeginTransaction();
+                com.Transaction = tran;
+
+
+                com.CommandText = "select 1 from Student where IndexNumber = @index";
+                com.Parameters.AddWithValue("index", index);
+
+                var dr = com.ExecuteReader();
+                if (!dr.Read())
+                {
+                    dr.Close();
+                    tran.Rollback();
+                    return false;
+                }
+                dr.Close();
+
+                return true;
+
             }
         }
     }
