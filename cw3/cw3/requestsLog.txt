@@ -6,3 +6,2087 @@ Body:
 }
 QueryString: 
 
+Method: GET
+Path: /
+Body: 
+
+QueryString: 
+
+Method: GET
+Path: /favicon.ico
+Body: 
+
+QueryString: 
+
+Method: GET
+Path: /api/students
+Body: 
+{
+	"firstName": "Kacper"
+}
+QueryString: 
+
+Method: GET
+Path: /api/students
+Body: 
+{
+	"firstName": "Kacper"
+}
+QueryString: 
+
+Method: GET
+Path: /api/students
+Body: 
+{
+	"firstName": "Kacper"
+}
+QueryString: 
+
+Method: GET
+Path: /api/students
+Body: 
+{
+	"firstName": "Kacper"
+}
+QueryString: 
+
+Method: GET
+Path: /api/students
+Body: 
+{
+	"firstName": "Kacper"
+}
+QueryString: 
+
+Method: GET
+Path: /
+Body: 
+
+QueryString: 
+
+Method: GET
+Path: /favicon.ico
+Body: 
+
+QueryString: 
+
+Method: GET
+Path: /
+Body: 
+
+QueryString: 
+
+Method: GET
+Path: /favicon.ico
+Body: 
+
+QueryString: 
+
+Method: GET
+Path: /api/students
+Body: 
+{
+	"firstName": "Kacper"
+}
+QueryString: 
+
+Method: GET
+Path: /api/students
+Body: 
+{
+	"firstName": "Kacper"
+}
+QueryString: 
+
+Method: GET
+Path: /api/students
+Body: 
+{
+	"firstName": "Kacper"
+}
+QueryString: 
+
+Method: GET
+Path: /api/students
+Body: 
+{
+	"firstName": "Kacper"
+}
+QueryString: 
+
+Method: GET
+Path: /api/students
+Body: 
+{
+	"firstName": "Kacper"
+}
+QueryString: 
+
+Method: GET
+Path: /api/students
+Body: 
+{
+	"firstName": "Kacper"
+}
+QueryString: 
+
+Method: GET
+Path: /api/students
+Body: 
+{
+	"firstName": "Kacper"
+}
+QueryString: 
+
+Method: GET
+Path: /api/students
+Body: 
+{
+	"firstName": "Kacper"
+}
+QueryString: 
+
+Method: GET
+Path: /api/students
+Body: 
+{
+	"firstName": "Kacper"
+}
+QueryString: 
+
+Method: GET
+Path: /api/students
+Body: 
+{
+	"firstName": "Kacper"
+}
+QueryString: 
+
+Method: GET
+Path: /api/students
+Body: 
+{
+	"firstName": "Kacper"
+}
+QueryString: 
+
+Method: GET
+Path: /
+Body: 
+
+QueryString: 
+
+Method: GET
+Path: /favicon.ico
+Body: 
+
+QueryString: 
+
+Method: GET
+Path: /api/students
+Body: 
+{
+	"firstName": "Kacper"
+}
+QueryString: 
+
+Method: GET
+Path: /api/students
+Body: 
+{
+	"firstName": "Kacper"
+}
+QueryString: 
+
+Method: GET
+Path: /api/students
+Body: 
+{
+	"firstName": "Kacper"
+}
+QueryString: 
+
+Method: GET
+Path: /api/students
+Body: 
+{
+	"firstName": "Kacper"
+}
+QueryString: 
+
+Method: GET
+Path: /api/students
+Body: 
+{
+	"firstName": "Kacper"
+}
+QueryString: 
+
+Method: GET
+Path: /api/students
+Body: 
+{
+	"firstName": "Kacper"
+}
+QueryString: 
+
+Method: GET
+Path: /api/students
+Body: 
+{
+	"firstName": "Kacper"
+}
+QueryString: 
+
+Method: GET
+Path: /api/students
+Body: 
+{
+	"firstName": "Kacper"
+}
+QueryString: 
+
+Method: GET
+Path: /api/students
+Body: 
+{
+	"firstName": "Kacper"
+}
+QueryString: 
+
+Method: GET
+Path: /api/students
+Body: 
+{
+	"firstName": "Kacper"
+}
+QueryString: 
+
+Method: GET
+Path: /api/students
+Body: 
+{
+	"firstName": "Kacper"
+}
+QueryString: 
+
+Method: GET
+Path: /api/students
+Body: 
+{
+	"firstName": "Kacper"
+}
+QueryString: 
+
+Method: GET
+Path: /api/students
+Body: 
+{
+	"firstName": "Kacper"
+}
+QueryString: 
+
+Method: GET
+Path: /api/students
+Body: 
+{
+	"firstName": "Kacper"
+}
+QueryString: 
+
+Method: GET
+Path: /api/students
+Body: 
+{
+	"firstName": "Kacper"
+}
+QueryString: 
+
+Method: GET
+Path: /api/students
+Body: 
+{
+	"firstName": "Kacper"
+}
+QueryString: 
+
+Method: GET
+Path: /api/students
+Body: 
+{
+	"firstName": "Kacper"
+}
+QueryString: 
+
+Method: GET
+Path: /api/students
+Body: 
+{
+	"firstName": "Kacper"
+}
+QueryString: 
+
+Method: GET
+Path: /api/students
+Body: 
+{
+	"firstName": "Kacper"
+}
+QueryString: 
+
+Method: GET
+Path: /api/students
+Body: 
+{
+	"firstName": "Kacper"
+}
+QueryString: 
+
+Method: GET
+Path: /api/students
+Body: 
+{
+	"firstName": "Kacper"
+}
+QueryString: 
+
+Method: GET
+Path: /api/students
+Body: 
+{
+	"firstName": "Kacper"
+}
+QueryString: 
+
+Method: GET
+Path: /
+Body: 
+
+QueryString: 
+
+Method: GET
+Path: /api/students
+Body: 
+{
+	"firstName": "Kacper"
+}
+QueryString: 
+
+Method: GET
+Path: /api/students
+Body: 
+{
+	"firstName": "Kacper"
+}
+QueryString: 
+
+Method: GET
+Path: /
+Body: 
+
+QueryString: 
+
+Method: GET
+Path: /api/students
+Body: 
+{
+	"firstName": "Kacper"
+}
+QueryString: 
+
+Method: GET
+Path: /api/students
+Body: 
+{
+	"firstName": "Kacper"
+}
+QueryString: 
+
+Method: GET
+Path: /api/students
+Body: 
+{
+	"login":"dupa",
+	"password":"cipa"
+}
+QueryString: 
+
+Method: GET
+Path: /api/students
+Body: 
+{
+	"Login":"dupa",
+	"Password":"cipa"
+}
+QueryString: 
+
+Method: GET
+Path: /api/students
+Body: 
+{
+	"Login":"login",
+	"Password":"cipa"
+}
+QueryString: 
+
+Method: GET
+Path: /api/students
+Body: 
+{
+	"Login":"login",
+	"Password":"cipa"
+}
+QueryString: 
+
+Method: POST
+Path: /api/students
+Body: 
+{
+	"Login":"login",
+	"Password":"cipa"
+}
+QueryString: 
+
+Method: POST
+Path: /api/students
+Body: 
+{
+	"Login":"login",
+	"Password":"cipa"
+}
+QueryString: 
+
+Method: POST
+Path: /api/students
+Body: 
+{
+	"Login":"login",
+	"Password":"cipa"
+}
+QueryString: 
+
+Method: GET
+Path: /
+Body: 
+
+QueryString: 
+
+Method: GET
+Path: /favicon.ico
+Body: 
+
+QueryString: 
+
+Method: POST
+Path: /api/students
+Body: 
+{
+	"Login":"login",
+	"Password":"cipa"
+}
+QueryString: 
+
+Method: GET
+Path: /
+Body: 
+
+QueryString: 
+
+Method: GET
+Path: /favicon.ico
+Body: 
+
+QueryString: 
+
+Method: POST
+Path: /api/students
+Body: 
+{
+	"Login":"login",
+	"Password":"cipa"
+}
+QueryString: 
+
+Method: GET
+Path: /
+Body: 
+
+QueryString: 
+
+Method: GET
+Path: /favicon.ico
+Body: 
+
+QueryString: 
+
+Method: GET
+Path: /
+Body: 
+
+QueryString: 
+
+Method: GET
+Path: /favicon.ico
+Body: 
+
+QueryString: 
+
+Method: POST
+Path: /api/students
+Body: 
+{
+	"Login":"login",
+	"Password":"cipa"
+}
+QueryString: 
+
+Method: POST
+Path: /api/students
+Body: 
+{
+	"Login":"login",
+	"Password":"cipa"
+}
+QueryString: 
+
+Method: GET
+Path: /favicon.ico
+Body: 
+
+QueryString: 
+
+Method: GET
+Path: /
+Body: 
+
+QueryString: 
+
+Method: GET
+Path: /favicon.ico
+Body: 
+
+QueryString: 
+
+Method: POST
+Path: /api/students
+Body: 
+{
+	"Login":"login",
+	"Password":"cipa"
+}
+QueryString: 
+
+Method: GET
+Path: /
+Body: 
+
+QueryString: 
+
+Method: GET
+Path: /favicon.ico
+Body: 
+
+QueryString: 
+
+Method: POST
+Path: /api/students
+Body: 
+{
+	"Login":"login",
+	"Password":"cipa"
+}
+QueryString: 
+
+Method: POST
+Path: /api/students
+Body: 
+{
+	"Login":"login",
+	"Password":"cipa"
+}
+QueryString: 
+
+Method: POST
+Path: /api/students
+Body: 
+{
+	"Login":"login",
+	"Password":"cipa"
+}
+QueryString: 
+
+Method: POST
+Path: /api/students
+Body: 
+{
+	"Login":"login",
+	"Password":"cipa"
+}
+QueryString: 
+
+Method: POST
+Path: /api/students
+Body: 
+{
+	"Login":"login",
+	"Password":"cipa"
+}
+QueryString: 
+
+Method: POST
+Path: /api/students
+Body: 
+{
+	"Login":"login",
+	"Password":"cipa"
+}
+QueryString: 
+
+Method: POST
+Path: /api/students
+Body: 
+{
+	"Login":"login",
+	"Password":"cipa"
+}
+QueryString: 
+
+Method: POST
+Path: /api/students
+Body: 
+{
+	"Login":"login",
+	"Password":"cipa"
+}
+QueryString: 
+
+Method: POST
+Path: /api/students
+Body: 
+{
+	"Login":"login",
+	"Password":"cipa"
+}
+QueryString: 
+
+Method: POST
+Path: /api/students
+Body: 
+{
+	"Login":"login",
+	"Password":"cipa"
+}
+QueryString: 
+
+Method: POST
+Path: /api/students
+Body: 
+{
+	"Login":"login",
+	"Password":"cipa"
+}
+QueryString: 
+
+Method: POST
+Path: /api/students
+Body: 
+{
+	"Login":"login",
+	"Password":"cipa"
+}
+QueryString: 
+
+Method: POST
+Path: /api/students
+Body: 
+{
+	"Login":"login",
+	"Password":"cipa"
+}
+QueryString: 
+
+Method: POST
+Path: /api/students
+Body: 
+{
+	"Login":"login",
+	"Password":"cipa"
+}
+QueryString: 
+
+Method: POST
+Path: /api/students
+Body: 
+{
+	"Login":"login",
+	"Password":"cipa"
+}
+QueryString: 
+
+Method: POST
+Path: /api/students
+Body: 
+{
+	"Login":"login",
+	"Password":"cipa"
+}
+QueryString: 
+
+Method: POST
+Path: /api/students
+Body: 
+{
+	"Login":"login",
+	"Password":"cipa"
+}
+QueryString: 
+
+Method: POST
+Path: /api/students
+Body: 
+{
+	"Login":"login",
+	"Password":"cipa"
+}
+QueryString: 
+
+Method: POST
+Path: /api/students
+Body: 
+{
+	"Login":"login",
+	"Password":"cipa"
+}
+QueryString: 
+
+Method: POST
+Path: /api/students
+Body: 
+{
+	"Login":"login",
+	"Password":"cipa"
+}
+QueryString: 
+
+Method: GET
+Path: /api/students
+Body: 
+{
+	"Login":"login",
+	"Password":"cipa"
+}
+QueryString: 
+
+Method: GET
+Path: /api/students
+Body: 
+{
+	"Login":"login",
+	"Password":"cipa"
+}
+QueryString: 
+
+Method: GET
+Path: /api/students
+Body: 
+{
+	"Login":"login",
+	"Password":"cipa"
+}
+QueryString: 
+
+Method: GET
+Path: /api/students
+Body: 
+{
+	"Login":"login",
+	"Password":"cipa"
+}
+QueryString: 
+
+Method: GET
+Path: /api/students
+Body: 
+{
+	"Login":"login",
+	"Password":"cipa"
+}
+QueryString: 
+
+Method: GET
+Path: /api/students
+Body: 
+{
+	"Login":"login",
+	"Password":"cipa"
+}
+QueryString: 
+
+Method: GET
+Path: /api/students
+Body: 
+{
+	"Login":"login",
+	"Password":"cipa"
+}
+QueryString: 
+
+Method: GET
+Path: /api/students
+Body: 
+{
+	"Login":"login",
+	"Password":"cipa"
+}
+QueryString: 
+
+Method: GET
+Path: /
+Body: 
+
+QueryString: 
+
+Method: GET
+Path: /favicon.ico
+Body: 
+
+QueryString: 
+
+Method: GET
+Path: /api/students
+Body: 
+{
+	"Login":"login",
+	"Password":"cipa"
+}
+QueryString: 
+
+Method: GET
+Path: /api/students
+Body: 
+{
+	"Login":"login",
+	"Password":"cipa"
+}
+QueryString: 
+
+Method: POST
+Path: /api/students
+Body: 
+{
+	"Login":"login",
+	"Password":"cipa"
+}
+QueryString: 
+
+Method: GET
+Path: /
+Body: 
+
+QueryString: 
+
+Method: GET
+Path: /favicon.ico
+Body: 
+
+QueryString: 
+
+Method: POST
+Path: /api/students
+Body: 
+{
+	"Login":"login",
+	"Password":"cipa"
+}
+QueryString: 
+
+Method: GET
+Path: /api/students
+Body: 
+{
+	"Login":"login",
+	"Password":"cipa"
+}
+QueryString: 
+
+Method: GET
+Path: /api/students
+Body: 
+{
+	"Login":"login",
+	"Password":"cipa"
+}
+QueryString: 
+
+Method: GET
+Path: /api/students
+Body: 
+
+QueryString: 
+
+Method: GET
+Path: /api/students
+Body: 
+{
+	"Login":"login",
+	"Password":"cipa"
+}
+QueryString: 
+
+Method: GET
+Path: /api/students
+Body: 
+{
+	"Login":"login",
+	"Password":"cipa"
+}
+QueryString: 
+
+Method: GET
+Path: /api/students
+Body: 
+{
+	"Login":"login",
+	"Password":"cipa"
+}
+QueryString: 
+
+Method: GET
+Path: /api/students
+Body: 
+{
+	"Login":"login",
+	"Password":"admin"
+}
+QueryString: 
+
+Method: POST
+Path: /api/students
+Body: 
+{
+	"Login":"login",
+	"Password":"admin"
+}
+QueryString: 
+
+Method: GET
+Path: /
+Body: 
+
+QueryString: 
+
+Method: GET
+Path: /favicon.ico
+Body: 
+
+QueryString: 
+
+Method: POST
+Path: /api/students/Login
+Body: 
+{
+	"Login":"login",
+	"Password":"admin"
+}
+QueryString: 
+
+Method: POST
+Path: /api/students/Login
+Body: 
+{
+	"Login":"login",
+	"Password":"admin"
+}
+QueryString: 
+
+Method: PUT
+Path: /api/students/Login
+Body: 
+{
+	"Login":"login",
+	"Password":"admin"
+}
+QueryString: 
+
+Method: GET
+Path: /
+Body: 
+
+QueryString: 
+
+Method: GET
+Path: /favicon.ico
+Body: 
+
+QueryString: 
+
+Method: POST
+Path: /api/students/login
+Body: 
+{
+	"Login":"login",
+	"Password":"admin"
+}
+QueryString: 
+
+Method: GET
+Path: /
+Body: 
+
+QueryString: 
+
+Method: GET
+Path: /favicon.ico
+Body: 
+
+QueryString: 
+
+Method: POST
+Path: /api/students/login
+Body: 
+{
+	"Login":"login",
+	"Password":"admin"
+}
+QueryString: 
+
+Method: GET
+Path: /
+Body: 
+
+QueryString: 
+
+Method: GET
+Path: /favicon.ico
+Body: 
+
+QueryString: 
+
+Method: POST
+Path: /api/students/login
+Body: 
+{
+	"Login":"login",
+	"Password":"admin"
+}
+QueryString: 
+
+Method: POST
+Path: /api/students/login
+Body: 
+{
+	"Login":"login",
+	"Password":"admin"
+}
+QueryString: 
+
+Method: GET
+Path: /favicon.ico
+Body: 
+
+QueryString: 
+
+Method: POST
+Path: /api/students/login
+Body: 
+{
+	"Login":"login",
+	"Password":"admin"
+}
+QueryString: 
+
+Method: GET
+Path: /
+Body: 
+
+QueryString: 
+
+Method: GET
+Path: /favicon.ico
+Body: 
+
+QueryString: 
+
+Method: POST
+Path: /api/students/login
+Body: 
+{
+	"Login":"login",
+	"Password":"admin"
+}
+QueryString: 
+
+Method: GET
+Path: /
+Body: 
+
+QueryString: 
+
+Method: GET
+Path: /favicon.ico
+Body: 
+
+QueryString: 
+
+Method: POST
+Path: /api/students/login
+Body: 
+{
+	"Login":"login",
+	"Password":"admin"
+}
+QueryString: 
+
+Method: GET
+Path: /api/students
+Body: 
+{
+	"Login":"login",
+	"Password":"admin"
+}
+QueryString: 
+
+Method: GET
+Path: /api/students
+Body: 
+{
+	"Login":"login",
+	"Password":"admin"
+}
+QueryString: 
+
+Method: GET
+Path: /
+Body: 
+
+QueryString: 
+
+Method: GET
+Path: /favicon.ico
+Body: 
+
+QueryString: 
+
+Method: POST
+Path: /api/students/login
+Body: 
+{
+	"Login":"login",
+	"Password":"admin"
+}
+QueryString: 
+
+Method: POST
+Path: /api/students/login
+Body: 
+{
+	"Login":"s19017",
+	"Password":"ccc"
+}
+QueryString: 
+
+Method: POST
+Path: /api/students/get
+Body: 
+{
+	"Login":"s19017",
+	"Password":"ccc"
+}
+QueryString: 
+
+Method: POST
+Path: /api/students
+Body: 
+{
+	"Login":"s19017",
+	"Password":"ccc"
+}
+QueryString: 
+
+Method: GET
+Path: /api/students
+Body: 
+{
+	"Login":"s19017",
+	"Password":"ccc"
+}
+QueryString: 
+
+Method: GET
+Path: /api/enrollments
+Body: 
+{
+	"Login":"s19017",
+	"Password":"ccc"
+}
+
+QueryString: 
+
+Method: GET
+Path: /api/enrollments
+Body: 
+{
+	"Login":"s19017",
+	"Password":"ccc"
+}
+
+QueryString: 
+
+Method: POST
+Path: /api/enrollments
+Body: 
+{
+	"Login":"s19017",
+	"Password":"ccc"
+}
+
+QueryString: 
+
+Method: POST
+Path: /api/enrollments
+Body: 
+{
+	"indexNUmber":"s19017"
+}
+QueryString: 
+
+Method: POST
+Path: /api/enrollments
+Body: 
+{
+	"indexNUmber":"s19017",
+	"firstName":"Kacper",
+	"lastName":"Krol",
+	"birthDate":"03-01-1999",
+	"studies":"0"
+}
+QueryString: 
+
+Method: POST
+Path: /api/enrollments
+Body: 
+{
+	"indexNUmber":"s19017",
+	"firstName":"Kacper",
+	"lastName":"Krol",
+	"birthDate":"null",
+	"studies":"0"
+}
+QueryString: 
+
+Method: POST
+Path: /api/enrollments
+Body: 
+{
+	"indexNUmber":"s19017",
+	"firstName":"Kacper",
+	"lastName":"Krol",
+	"birthDate":null,
+	"studies":"0"
+}
+QueryString: 
+
+Method: POST
+Path: /api/enrollments
+Body: 
+{
+	"indexNUmber":"s19017",
+	"firstName":"Kacper",
+	"lastName":"Krol",
+	"birthDate":"2019-01-01",
+	"studies":"0"
+}
+QueryString: 
+
+Method: POST
+Path: /api/enrollments
+Body: 
+{
+	"indexNUmber":"s19017",
+	"firstName":"Kacper",
+	"lastName":"Krol",
+	"birthDate":"2019-01-01",
+	"studies":"1"
+}
+QueryString: 
+
+Method: POST
+Path: /api/enrollments
+Body: 
+{
+	"indexNUmber":"s19017",
+	"firstName":"Kacper",
+	"lastName":"Krol",
+	"birthDate":"2019-01-01",
+	"studies":"Informatyka"
+}
+QueryString: 
+
+Method: POST
+Path: /api/enrollments
+Body: 
+{
+	"indexNUmber":"s19018",
+	"firstName":"Kacper",
+	"lastName":"Krol",
+	"birthDate":"2019-01-01",
+	"studies":"Informatyka"
+}
+QueryString: 
+
+Method: GET
+Path: /
+Body: 
+
+QueryString: 
+
+Method: GET
+Path: /favicon.ico
+Body: 
+
+QueryString: 
+
+Method: POST
+Path: /api/enrollments
+Body: 
+{
+	"indexNUmber":"s19019",
+	"firstName":"Kacper",
+	"lastName":"Krol",
+	"birthDate":"2019-01-01",
+	"studies":"Informatyka"
+}
+QueryString: 
+
+Method: POST
+Path: /api/login
+Body: 
+{
+	"login":"s19017",
+	"Password":"ccc"
+}
+QueryString: 
+
+Method: POST
+Path: /api/students/login
+Body: 
+{
+	"login":"s19017",
+	"Password":"ccc"
+}
+QueryString: 
+
+Method: POST
+Path: /api/enrollments
+Body: 
+{
+	"indexNUmber":"s19019",
+	"firstName":"Kacper",
+	"lastName":"Krol",
+	"birthDate":"2019-01-01",
+	"studies":"Informatyka"
+}
+QueryString: 
+
+Method: POST
+Path: /api/students/login
+Body: 
+{
+	"login":"s19017",
+	"Password":"ccc"
+}
+QueryString: 
+
+Method: GET
+Path: /favicon.ico
+Body: 
+
+QueryString: 
+
+Method: POST
+Path: /api/students/login
+Body: 
+{
+	"login":"s19017",
+	"Password":"ccc"
+}
+QueryString: 
+
+Method: POST
+Path: /api/enrollments
+Body: 
+{
+	"indexNUmber":"s19019",
+	"firstName":"Kacper",
+	"lastName":"Krol",
+	"birthDate":"2019-01-01",
+	"studies":"Informatyka"
+}
+QueryString: 
+
+Method: POST
+Path: /api/enrollments
+Body: 
+{
+	"indexNUmber":"s19019",
+	"firstName":"Kacper",
+	"lastName":"Krol",
+	"birthDate":"2019-01-01",
+	"studies":"Informatyka"
+}
+QueryString: 
+
+Method: GET
+Path: /
+Body: 
+
+QueryString: 
+
+Method: GET
+Path: /favicon.ico
+Body: 
+
+QueryString: 
+
+Method: POST
+Path: /api/enrollments
+Body: 
+{
+	"indexNUmber":"s19019",
+	"firstName":"Kacper",
+	"lastName":"Krol",
+	"birthDate":"2019-01-01",
+	"studies":"Informatyka"
+}
+QueryString: 
+
+Method: POST
+Path: /api/enrollments
+Body: 
+{
+	"indexNUmber":"s19019",
+	"firstName":"Kacper",
+	"lastName":"Krol",
+	"birthDate":"2019-01-01",
+	"studies":"Informatyka"
+}
+QueryString: 
+
+Method: POST
+Path: /api/enrollments
+Body: 
+{
+	"indexNUmber":"s19019",
+	"firstName":"Kacper",
+	"lastName":"Krol",
+	"birthDate":"2019-01-01",
+	"studies":"Informatyka"
+}
+QueryString: 
+
+Method: POST
+Path: /api/enrollments
+Body: 
+{
+	"indexNUmber":"s19019",
+	"firstName":"Kacper",
+	"lastName":"Krol",
+	"birthDate":"2019-01-01",
+	"studies":"Informatyka"
+}
+QueryString: 
+
+Method: GET
+Path: /
+Body: 
+
+QueryString: 
+
+Method: GET
+Path: /favicon.ico
+Body: 
+
+QueryString: 
+
+Method: POST
+Path: /api/enrollments
+Body: 
+{
+	"indexNUmber":"s19019",
+	"firstName":"Kacper",
+	"lastName":"Krol",
+	"birthDate":"2019-01-01",
+	"studies":"Informatyka"
+}
+QueryString: 
+
+Method: GET
+Path: /
+Body: 
+
+QueryString: 
+
+Method: GET
+Path: /favicon.ico
+Body: 
+
+QueryString: 
+
+Method: POST
+Path: /api/enrollments
+Body: 
+{
+	"indexNUmber":"s19019",
+	"firstName":"Kacper",
+	"lastName":"Krol",
+	"birthDate":"2019-01-01",
+	"studies":"Informatyka"
+}
+QueryString: 
+
+Method: POST
+Path: /api/enrollments
+Body: 
+{
+	"indexNUmber":"s19020",
+	"firstName":"Kacper",
+	"lastName":"Krol",
+	"birthDate":"2019-01-01",
+	"studies":"Informatyka"
+}
+QueryString: 
+
+Method: GET
+Path: /
+Body: 
+
+QueryString: 
+
+Method: GET
+Path: /favicon.ico
+Body: 
+
+QueryString: 
+
+Method: POST
+Path: /api/students/login
+Body: 
+{
+	"login":"s19017",
+	"Password":"ccc"
+}
+QueryString: 
+
+Method: GET
+Path: /
+Body: 
+
+QueryString: 
+
+Method: GET
+Path: /favicon.ico
+Body: 
+
+QueryString: 
+
+Method: POST
+Path: /api/students/login
+Body: 
+{
+	"login":"s19017",
+	"Password":"ccc"
+}
+QueryString: 
+
+Method: POST
+Path: /api/register
+Body: 
+{
+	"indexNUmber":"s19021",
+	"firstName":"Kacper",
+	"lastName":"Krol",
+	"birthDate":"2019-01-01",
+	"studies":"Informatyka",
+	"password":"ttt"
+}
+QueryString: 
+
+Method: POST
+Path: /api/students/register
+Body: 
+{
+	"indexNUmber":"s19021",
+	"firstName":"Kacper",
+	"lastName":"Krol",
+	"birthDate":"2019-01-01",
+	"studies":"Informatyka",
+	"password":"ttt"
+}
+QueryString: 
+
+Method: POST
+Path: /api/students/register
+Body: 
+{
+	"index":"s19021",
+	"firstName":"Kacper",
+	"lastName":"Krol",
+	"birthDate":"2019-01-01",
+	"studies":"Informatyka",
+	"password":"ttt"
+}
+QueryString: 
+
+Method: GET
+Path: /
+Body: 
+
+QueryString: 
+
+Method: GET
+Path: /favicon.ico
+Body: 
+
+QueryString: 
+
+Method: POST
+Path: /api/students/register
+Body: 
+{
+	"index":"s19021",
+	"firstName":"Kacper",
+	"lastName":"Krol",
+	"birthDate":"2019-01-01",
+	"studies":"Informatyka",
+	"password":"ttt"
+}
+QueryString: 
+
+Method: GET
+Path: /
+Body: 
+
+QueryString: 
+
+Method: GET
+Path: /favicon.ico
+Body: 
+
+QueryString: 
+
+Method: POST
+Path: /api/students/register
+Body: 
+{
+	"index":"s19021",
+	"firstName":"Kacper",
+	"lastName":"Krol",
+	"birthDate":"2019-01-01",
+	"studies":"Informatyka",
+	"password":"ttt"
+}
+QueryString: 
+
+Method: GET
+Path: /
+Body: 
+
+QueryString: 
+
+Method: GET
+Path: /favicon.ico
+Body: 
+
+QueryString: 
+
+Method: POST
+Path: /api/students/register
+Body: 
+{
+	"index":"s19021",
+	"firstName":"Kacper",
+	"lastName":"Krol",
+	"birthDate":"2019-01-01",
+	"studies":"Informatyka",
+	"password":"ttt"
+}
+QueryString: 
+
+Method: GET
+Path: /
+Body: 
+
+QueryString: 
+
+Method: GET
+Path: /favicon.ico
+Body: 
+
+QueryString: 
+
+Method: POST
+Path: /api/students/register
+Body: 
+{
+	"index":"s19021",
+	"firstName":"Kacper",
+	"lastName":"Krol",
+	"birthDate":"2019-01-01",
+	"studies":"Informatyka",
+	"password":"ttt"
+}
+QueryString: 
+
+Method: GET
+Path: /
+Body: 
+
+QueryString: 
+
+Method: GET
+Path: /favicon.ico
+Body: 
+
+QueryString: 
+
+Method: POST
+Path: /api/students/register
+Body: 
+{
+	"index":"s19021",
+	"firstName":"Kacper",
+	"lastName":"Krol",
+	"birthDate":"2019-01-01",
+	"studies":"Informatyka",
+	"password":"ttt"
+}
+QueryString: 
+
+Method: POST
+Path: /api/students/register
+Body: 
+{
+	"index":"s19021",
+	"firstName":"Kacper",
+	"lastName":"Krol",
+	"birthDate":"2019-01-01",
+	"studies":"Informatyka",
+	"password":"ttt"
+}
+QueryString: 
+
+Method: GET
+Path: /
+Body: 
+
+QueryString: 
+
+Method: GET
+Path: /favicon.ico
+Body: 
+
+QueryString: 
+
+Method: POST
+Path: /api/students/register
+Body: 
+{
+	"index":"s19021",
+	"firstName":"Kacper",
+	"lastName":"Krol",
+	"birthDate":"2019-01-01",
+	"studies":"Informatyka",
+	"password":"ttt"
+}
+QueryString: 
+
+Method: POST
+Path: /api/students/register
+Body: 
+{
+	"index":"s19021",
+	"firstName":"Kacper",
+	"lastName":"Krol",
+	"birthDate":"2019-01-01",
+	"studies":"Informatyka",
+	"password":"ttt"
+}
+QueryString: 
+
+Method: POST
+Path: /api/students/register
+Body: 
+{
+	"index":"s19021",
+	"firstName":"Kacper",
+	"lastName":"Krol",
+	"birthDate":"2019-01-01",
+	"studies":"Informatyka",
+	"password":"ttt"
+}
+QueryString: 
+
+Method: GET
+Path: /
+Body: 
+
+QueryString: 
+
+Method: GET
+Path: /favicon.ico
+Body: 
+
+QueryString: 
+
+Method: POST
+Path: /api/students/register
+Body: 
+{
+	"index":"s19021",
+	"firstName":"Kacper",
+	"lastName":"Krol",
+	"birthDate":"2019-01-01",
+	"studies":"Informatyka",
+	"password":"ttt"
+}
+QueryString: 
+
+Method: POST
+Path: /api/students/register
+Body: 
+{
+	"index":"s19021",
+	"firstName":"Kacper",
+	"lastName":"Krol",
+	"birthDate":"2019-01-01",
+	"studies":"Informatyka",
+	"password":"ttt"
+}
+QueryString: 
+
+Method: GET
+Path: /
+Body: 
+
+QueryString: 
+
+Method: GET
+Path: /favicon.ico
+Body: 
+
+QueryString: 
+
+Method: POST
+Path: /api/students/login
+Body: 
+{
+	"login":"s19017",
+	"Password":"ccc"
+}
+QueryString: 
+
+Method: GET
+Path: /
+Body: 
+
+QueryString: 
+
+Method: GET
+Path: /favicon.ico
+Body: 
+
+QueryString: 
+
+Method: POST
+Path: /api/students/login
+Body: 
+{
+	"login":"s19017",
+	"Password":"ccc"
+}
+QueryString: 
+
+Method: GET
+Path: /
+Body: 
+
+QueryString: 
+
+Method: GET
+Path: /favicon.ico
+Body: 
+
+QueryString: 
+
+Method: POST
+Path: /api/students/login
+Body: 
+{
+	"login":"s19017",
+	"Password":"ccc"
+}
+QueryString: 
+
+Method: GET
+Path: /
+Body: 
+
+QueryString: 
+
+Method: GET
+Path: /favicon.ico
+Body: 
+
+QueryString: 
+
+Method: POST
+Path: /api/students/login
+Body: 
+{
+	"login":"s19017",
+	"Password":"ccc"
+}
+QueryString: 
+
+Method: GET
+Path: /
+Body: 
+
+QueryString: 
+
+Method: GET
+Path: /favicon.ico
+Body: 
+
+QueryString: 
+
+Method: POST
+Path: /api/students/login
+Body: 
+{
+	"login":"s19017",
+	"Password":"ccc"
+}
+QueryString: 
+
+Method: POST
+Path: /api/students/register
+Body: 
+{
+	"index":"s19022",
+	"firstName":"Kacper",
+	"lastName":"Krol",
+	"birthDate":"2019-01-01",
+	"studies":"Informatyka",
+	"password":"ttt"
+}
+QueryString: 
+
+Method: POST
+Path: /api/students/login
+Body: 
+{
+	"login":"s19022",
+	"Password":"ttt"
+}
+QueryString: 
+
+Method: POST
+Path: /api/students/login
+Body: 
+{
+	"login":"s19022",
+	"Password":"ttt"
+}
+QueryString: 
+
+Method: POST
+Path: /api/students/login
+Body: 
+{
+	"login":"s19022",
+	"Password":"ttt"
+}
+QueryString: 
+
+Method: POST
+Path: /api/students/login
+Body: 
+{
+	"login":"s19022",
+	"Password":"ttt"
+}
+QueryString: 
+
+Method: GET
+Path: /
+Body: 
+
+QueryString: 
+
+Method: GET
+Path: /favicon.ico
+Body: 
+
+QueryString: 
+
+Method: POST
+Path: /api/students/login
+Body: 
+{
+	"login":"s19022",
+	"Password":"ttt"
+}
+QueryString: 
+
+Method: GET
+Path: /
+Body: 
+
+QueryString: 
+
+Method: GET
+Path: /favicon.ico
+Body: 
+
+QueryString: 
+
+Method: POST
+Path: /api/students/login
+Body: 
+{
+	"login":"s19022",
+	"Password":"ttt"
+}
+QueryString: 
+
+Method: POST
+Path: /api/students/login
+Body: 
+{
+	"login":"s19022",
+	"Password":"ttt"
+}
+QueryString: 
+
+Method: GET
+Path: /
+Body: 
+
+QueryString: 
+
+Method: GET
+Path: /favicon.ico
+Body: 
+
+QueryString: 
+
+Method: POST
+Path: /api/students/login
+Body: 
+{
+	"login":"s19022",
+	"Password":"ttt"
+}
+QueryString: 
+

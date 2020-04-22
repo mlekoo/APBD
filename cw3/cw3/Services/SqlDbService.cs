@@ -5,6 +5,8 @@ using cw3.DTOs.Requests;
 using Microsoft.AspNetCore.Mvc;
 using cw3.DTOs.Responses;
 using System;
+using cw3.Handlers;
+using System.Diagnostics;
 
 namespace cw3.DAL
 {
@@ -33,8 +35,9 @@ namespace cw3.DAL
                         firstName = dr["FirstName"].ToString(),
                         lastName = dr["LastName"].ToString(),
                         index = dr["IndexNumber"].ToString()
+
                     };
-                    
+
                     _students.Add(st);
                 }
             }
@@ -61,7 +64,7 @@ namespace cw3.DAL
                         idStud = int.Parse(dr["IdStudy"].ToString()),
                         date = dr["StartDate"].ToString()
                     };
-                    
+
                     enrollments.Add(enrol);
                 }
                 return enrollments;
@@ -69,29 +72,29 @@ namespace cw3.DAL
         }
         public Student UpdateStudent(string id, string varType, string value)
         {
-            
-            foreach(var student in _students)
+
+            foreach (var student in _students)
             {
-                if(student.index == id)
+                if (student.index == id)
                 {
                     if (varType == "name")
                     {
                         student.firstName = value;
                     }
-                    else if(varType == "lname")
+                    else if (varType == "lname")
                     {
                         student.lastName = value;
                     }
                 }
                 return student;
             }
-            return null; 
+            return null;
         }
         public void DeleteStudent(string id)
         {
-            foreach(var student in _students)
+            foreach (var student in _students)
             {
-                if(student.index == id)
+                if (student.index == id)
                 {
                     _students.ToList().Remove(student);
                 }
@@ -119,7 +122,7 @@ namespace cw3.DAL
                         index = dr["IndexNumber"].ToString()
                     };
                 }
-                
+
                 return st;
             }
         }
@@ -134,8 +137,8 @@ namespace cw3.DAL
                 studies = request.studies
             };
 
-            using(var con = new SqlConnection("Data Source=db-mssql;Initial Catalog=s19017;Integrated Security=True"))
-            using(var com = new SqlCommand())
+            using (var con = new SqlConnection("Data Source=db-mssql;Initial Catalog=s19017;Integrated Security=True"))
+            using (var com = new SqlCommand())
             {
                 com.Connection = con;
                 con.Open();
@@ -154,11 +157,11 @@ namespace cw3.DAL
                         tran.Rollback();
                         return BadRequest("Studia nie istnieja");
                     }
-                    
+
                     int idstudies = (int)dr["IdStudy"];
                     dr.Close();
                     com.CommandText = "select e.IdEnrollment, e.Semester, e.IdStudy, e.StartDate from Enrollment e join Studies s on e.idStudy = s.IdStudy where e.semester=1 and s.name=@name;";
-                    
+
                     int idEnrollment;
                     dr = com.ExecuteReader();
                     if (!dr.Read())
@@ -167,9 +170,9 @@ namespace cw3.DAL
                         com.CommandText = "insert into Enrollment values (ISNULL(MAX(IdEnrollment) + 1), @Semestr, @IdStudy, GetDate())";
                         com.Parameters.AddWithValue("Semestr", 1);
                         com.Parameters.AddWithValue("IdStudy", request.studies);
-                        com.ExecuteNonQuery();  
+                        com.ExecuteNonQuery();
                     }
-                    dr.Close();    
+                    dr.Close();
                     com.CommandText = "select e.IdEnrollment, e.Semester, e.IdStudy, e.StartDate from Enrollment e join Studies s on e.idStudy = s.IdStudy where e.semester=1 and s.name=@name;";
                     dr = com.ExecuteReader();
                     dr.Read();
@@ -194,7 +197,7 @@ namespace cw3.DAL
                     com.Parameters.AddWithValue("IdEnrollment", idEnrollment);
                     com.ExecuteNonQuery();
                     tran.Commit();
-                    
+
                 }
                 catch (SqlException e)
                 {
@@ -245,7 +248,7 @@ namespace cw3.DAL
                     };
                     return StatusCode(201, response);
                 }
-                catch(SqlException e)
+                catch (SqlException e)
                 {
                     tran.Rollback();
                     return BadRequest(e);
@@ -254,7 +257,8 @@ namespace cw3.DAL
         }
 
 
-        public static bool CheckIndex(string index) {
+        public static bool CheckIndex(string index)
+        {
 
             using (var con = new SqlConnection("Data Source=db-mssql;Initial Catalog=s19017;Integrated Security=True"))
             using (var com = new SqlCommand())
@@ -278,6 +282,77 @@ namespace cw3.DAL
                 dr.Close();
 
                 return true;
+
+            }
+
+        }
+        public static bool RegisterAccount(Student student,string salt, string hash) {
+            if (CheckIndex(student.index)) {
+                return false;
+            }
+            using (var con = new SqlConnection("Data Source=db-mssql;Initial Catalog=s19017;Integrated Security=True"))
+            using (var com = new SqlCommand())
+            {
+                com.Connection = con;
+                con.Open();
+                var tran = con.BeginTransaction();
+                com.Transaction = tran;
+
+                
+
+                com.CommandText = "INSERT INTO STUDENT VALUES ('" + student.index
+                                                                  + "','" + student.firstName
+                                                                    + "','" + student.lastName
+                                                                    + "','" + student.birthDate
+                                                                    + "',1,'"  + hash + "','" + salt + "',null)"; 
+
+                com.ExecuteNonQuery();
+                com.Transaction.Commit();
+
+                return true;
+
+            }
+        }
+        public static bool CheckStudent(LoginRequestDto request)
+        {
+            using (var con = new SqlConnection("Data Source=db-mssql;Initial Catalog=s19017;Integrated Security=True"))
+            using (var com = new SqlCommand())
+            {
+                com.Connection = con;
+                con.Open();
+              
+                
+                com.CommandText = "select IndexNumber,password,salt from Student where IndexNumber = @index";
+                com.Parameters.AddWithValue("index", request.Login);
+
+
+                var dr = com.ExecuteReader();
+
+                if (!dr.Read()) { 
+                    dr.Close();
+                    return false;
+                }
+                    else
+                {
+                    var req = new LoginRequestDto()
+                    {
+
+                        Login = (string)dr["IndexNumber"],
+                        Password = (string)dr["Password"],
+                        Salt = dr["salt"] != null ? (string)dr["salt"] : " "
+                    };
+                    Debug.WriteLine(req.Login);
+                    Debug.WriteLine(req.Password);
+                    Debug.WriteLine(req.Salt);
+
+
+                    if (BasicAuthHandler.Validate(request.Password, req.Salt, req.Password))
+                        return true;
+                }
+
+
+
+                return false;
 
             }
         }

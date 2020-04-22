@@ -12,5 +12,6 @@ namespace cw3
         public string index { get; set; }
         public string studies { get; set; }
         public DateTime birthDate { get; set; }
+        public string password { get; set; }
     }
 }
