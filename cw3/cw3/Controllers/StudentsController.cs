@@ -92,10 +92,54 @@ namespace cw3.Controllers
                     expires: DateTime.Now.AddMinutes(10),
                     signingCredentials: creds
                 );
-
-            return Ok(new {
+            var rt = Guid.NewGuid();
+            if (!SqlDbService.SaveRefreshToken(request.Login, rt)) {
+                return StatusCode(400, "Couldn't save refresh token!");
+            };
+            return Ok(new
+            {
                 token = new JwtSecurityTokenHandler().WriteToken(token),
-                refreshToken = Guid.NewGuid()
+                refreshToken = rt
+            }); 
+        }
+        [HttpPost("token/{Rtoken}")]
+        public IActionResult RefreshToken(string Rtoken) {
+            var rtk = System.Guid.Parse(Rtoken);
+            var newToken = SqlDbService.CheckRefreshToken(rtk);
+            if (newToken == null) {
+
+                return StatusCode(403, "Wrong refresh-token");
+
+            }
+
+            var claims = new[]
+            {
+                new Claim(ClaimTypes.NameIdentifier, "1"),
+                new Claim(ClaimTypes.Name, "login"),
+                new Claim(ClaimTypes.Role, "admin"),
+                new Claim(ClaimTypes.Role, "student"),
+                new Claim(ClaimTypes.Role, "employee")
+
+            };
+
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["SecretKey"]));
+
+            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+
+            var token = new JwtSecurityToken
+                (
+                    issuer: "Kacpi",
+                    audience: "Students",
+                    claims: claims,
+                    expires: DateTime.Now.AddMinutes(10),
+                    signingCredentials: creds
+                );
+            var rt = newToken;
+
+            return Ok(new
+            {
+                token = new JwtSecurityTokenHandler().WriteToken(token),
+                refreshToken = rt
             });
         }
 

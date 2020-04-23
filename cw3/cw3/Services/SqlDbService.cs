@@ -320,19 +320,19 @@ namespace cw3.DAL
             {
                 com.Connection = con;
                 con.Open();
-              
-                
+
+
                 com.CommandText = "select IndexNumber,password,salt from Student where IndexNumber = @index";
                 com.Parameters.AddWithValue("index", request.Login);
 
 
                 var dr = com.ExecuteReader();
 
-                if (!dr.Read()) { 
+                if (!dr.Read()) {
                     dr.Close();
                     return false;
                 }
-                    else
+                else
                 {
                     var req = new LoginRequestDto()
                     {
@@ -353,6 +353,72 @@ namespace cw3.DAL
 
 
                 return false;
+
+            }
+        }
+        public static System.Guid? CheckRefreshToken(System.Guid token)
+        {
+            using (var con = new SqlConnection("Data Source=db-mssql;Initial Catalog=s19017;Integrated Security=True"))
+            using (var com = new SqlCommand())
+            {
+                com.Connection = con;
+                con.Open();
+
+
+                com.CommandText = "select 1 from Student where RefreshToken = @token";
+                com.Parameters.AddWithValue("token", token);
+
+
+                var dr = com.ExecuteReader();
+
+                if (!dr.Read())
+                {
+                    dr.Close();
+
+                    return null;
+                }
+            }
+                using (var con = new SqlConnection("Data Source=db-mssql;Initial Catalog=s19017;Integrated Security=True"))
+                using (var com = new SqlCommand())
+                {
+                    com.Connection = con;
+                    con.Open();
+
+                    System.Guid ntoken = System.Guid.NewGuid();
+
+                    com.CommandText = "update Student set RefreshToken = @ntoken where RefreshToken = @token";
+                    com.Parameters.AddWithValue("token", token);
+                    com.Parameters.AddWithValue("ntoken", ntoken);
+
+                var dr = com.ExecuteReader();
+
+
+                    return ntoken;
+
+            }
+        }
+        public static bool SaveRefreshToken(string indexNumber, System.Guid token) 
+        {
+            using (var con = new SqlConnection("Data Source=db-mssql;Initial Catalog=s19017;Integrated Security=True"))
+            using (var com = new SqlCommand())
+            {
+                com.Connection = con;
+                con.Open();
+                var tran = con.BeginTransaction();
+                com.Transaction = tran;
+
+
+
+                com.CommandText = "UPDATE STUDENT SET RefreshToken = @token where IndexNumber = @indexNumber";
+                com.Parameters.AddWithValue("token", token);
+                com.Parameters.AddWithValue("indexNumber", indexNumber);
+
+                if(com.ExecuteNonQuery() < 1) 
+                    return false;
+                com.Transaction.Commit();
+                
+
+                return true;
 
             }
         }

@@ -2090,3 +2090,525 @@ Body:
 }
 QueryString: 
 
+Method: GET
+Path: /
+Body: 
+
+QueryString: 
+
+Method: GET
+Path: /favicon.ico
+Body: 
+
+QueryString: 
+
+Method: GET
+Path: /
+Body: 
+
+QueryString: 
+
+Method: GET
+Path: /favicon.ico
+Body: 
+
+QueryString: 
+
+Method: POST
+Path: /api/students/login
+Body: 
+{
+	"login":"s19022",
+	"Password":"ttt"
+}
+QueryString: 
+
+Method: GET
+Path: /
+Body: 
+
+QueryString: 
+
+Method: GET
+Path: /favicon.ico
+Body: 
+
+QueryString: 
+
+Method: POST
+Path: /api/students/login
+Body: 
+{
+	"login":"s19022",
+	"Password":"ttt"
+}
+QueryString: 
+
+Method: GET
+Path: /
+Body: 
+
+QueryString: 
+
+Method: GET
+Path: /favicon.ico
+Body: 
+
+QueryString: 
+
+Method: POST
+Path: /api/students/login
+Body: 
+{
+	"login":"s19022",
+	"Password":"ttt"
+}
+QueryString: 
+
+Method: POST
+Path: /api/students/refresh-token/42fce864-bb70-43d6-8a22-257249a28dc9
+Body: 
+{
+	"login":"s19022",
+	"Password":"ttt"
+}
+QueryString: 
+
+Method: GET
+Path: /
+Body: 
+
+QueryString: 
+
+Method: GET
+Path: /favicon.ico
+Body: 
+
+QueryString: 
+
+Method: POST
+Path: /api/students/refresh-token/42fce864-bb70-43d6-8a22-257249a28dc9
+Body: 
+{
+	"login":"s19022",
+	"Password":"ttt"
+}
+QueryString: 
+
+Method: POST
+Path: /api/students/refresh-token
+Body: 
+{
+	"login":"s19022",
+	"Password":"ttt"
+}
+QueryString: ?token=42fce864-bb70-43d6-8a22-257249a28dc9
+
+Method: POST
+Path: /api/students/refresh-token
+Body: 
+
+QueryString: ?token=42fce864-bb70-43d6-8a22-257249a28dc9
+
+Method: POST
+Path: /api/students/refresh-token/
+Body: 
+
+QueryString: ?token=42fce864-bb70-43d6-8a22-257249a28dc9
+
+Method: GET
+Path: /
+Body: 
+
+QueryString: 
+
+Method: GET
+Path: /favicon.ico
+Body: 
+
+QueryString: 
+
+Method: POST
+Path: /api/students/refresh-token
+Body: 
+{
+	"login":"s19022",
+	"Password":"ttt"
+}
+QueryString: ?token=42fce864-bb70-43d6-8a22-257249a28dc9
+
+Method: POST
+Path: /api/students/refresh-token
+Body: 
+{
+	"login":"s19022",
+	"Password":"ttt"
+}
+QueryString: ?token=42fce864-bb70-43d6-8a22-257249a28dc9
+
+Method: POST
+Path: /api/students/refresh-token
+Body: 
+{
+	"login":"s19022",
+	"Password":"ttt"
+}
+QueryString: ?token=42fce864-bb70-43d6-8a22-257249a28dc9
+
+Method: POST
+Path: /api/students/refresh-token
+Body: 
+{
+	"login":"s19022",
+	"Password":"ttt"
+}
+QueryString: ?token=42fce864-bb70-43d6-8a22-257249a28dc9
+
+Method: POST
+Path: /api/students/refresh-token
+Body: 
+{
+	"login":"s19022",
+	"Password":"ttt"
+}
+QueryString: ?token=42fce864-bb70-43d6-8a22-257249a28dc9
+
+Method: POST
+Path: /api/students/refresh-token
+Body: 
+{
+	"login":"s19022",
+	"Password":"ttt"
+}
+QueryString: ?token=42fce864-bb70-43d6-8a22-257249a28dc9
+
+Method: POST
+Path: /api/students/refresh-token
+Body: 
+{
+	"login":"s19022",
+	"Password":"ttt"
+}
+QueryString: ?token=42fce864-bb70-43d6-8a22-257249a28dc9
+
+Method: GET
+Path: /
+Body: 
+
+QueryString: 
+
+Method: GET
+Path: /favicon.ico
+Body: 
+
+QueryString: 
+
+Method: POST
+Path: /api/students/refresh-token/
+Body: 
+{
+	"login":"s19022",
+	"Password":"ttt"
+}
+QueryString: ?token=42fce864-bb70-43d6-8a22-257249a28dc9
+
+Method: POST
+Path: /api/students/refresh-token
+Body: 
+{
+	"login":"s19022",
+	"Password":"ttt"
+}
+QueryString: ?token=42fce864-bb70-43d6-8a22-257249a28dc9
+
+Method: GET
+Path: /
+Body: 
+
+QueryString: 
+
+Method: GET
+Path: /favicon.ico
+Body: 
+
+QueryString: 
+
+Method: POST
+Path: /api/students
+Body: 
+{
+	"login":"s19022",
+	"Password":"ttt"
+}
+QueryString: ?token=42fce864-bb70-43d6-8a22-257249a28dc9
+
+Method: POST
+Path: /api/students
+Body: 
+{
+	"login":"s19022",
+	"Password":"ttt"
+}
+QueryString: ?token=42fce864-bb70-43d6-8a22-257249a28dc9
+
+Method: GET
+Path: /
+Body: 
+
+QueryString: 
+
+Method: GET
+Path: /favicon.ico
+Body: 
+
+QueryString: 
+
+Method: POST
+Path: /api/students/token
+Body: 
+{
+	"login":"s19022",
+	"Password":"ttt"
+}
+QueryString: ?token=42fce864-bb70-43d6-8a22-257249a28dc9
+
+Method: POST
+Path: /api/students/token/
+Body: 
+{
+	"login":"s19022",
+	"Password":"ttt"
+}
+QueryString: ?token=42fce864-bb70-43d6-8a22-257249a28dc9
+
+Method: POST
+Path: /api/students/token/
+Body: 
+{
+	"login":"s19022",
+	"Password":"ttt"
+}
+QueryString: ?token=42fce864-bb70-43d6-8a22-257249a28dc9
+
+Method: POST
+Path: /api/students/token/42fce864-bb70-43d6-8a22-257249a28dc9
+Body: 
+{
+	"login":"s19022",
+	"Password":"ttt"
+}
+QueryString: 
+
+Method: GET
+Path: /
+Body: 
+
+QueryString: 
+
+Method: GET
+Path: /favicon.ico
+Body: 
+
+QueryString: 
+
+Method: POST
+Path: /api/students/token/42fce864-bb70-43d6-8a22-257249a28dc9
+Body: 
+{
+	"login":"s19022",
+	"Password":"ttt"
+}
+QueryString: 
+
+Method: POST
+Path: /api/students/token/token=42fce864-bb70-43d6-8a22-257249a28dc9
+Body: 
+{
+	"login":"s19022",
+	"Password":"ttt"
+}
+QueryString: 
+
+Method: POST
+Path: /api/students/token/
+Body: 
+{
+	"login":"s19022",
+	"Password":"ttt"
+}
+QueryString: ?token=42fce864-bb70-43d6-8a22-257249a28dc9
+
+Method: POST
+Path: /api/students/token/token=42fce864-bb70-43d6-8a22-257249a28dc9
+Body: 
+{
+	"login":"s19022",
+	"Password":"ttt"
+}
+QueryString: 
+
+Method: POST
+Path: /api/students/token/
+Body: 
+{
+	"login":"s19022",
+	"Password":"ttt"
+}
+QueryString: ?42fce864-bb70-43d6-8a22-257249a28dc9
+
+Method: POST
+Path: /api/students/token/token=42fce864-bb70-43d6-8a22-257249a28dc9
+Body: 
+{
+	"login":"s19022",
+	"Password":"ttt"
+}
+QueryString: 
+
+Method: GET
+Path: /
+Body: 
+
+QueryString: 
+
+Method: GET
+Path: /favicon.ico
+Body: 
+
+QueryString: 
+
+Method: POST
+Path: /api/students/token/token=42fce864-bb70-43d6-8a22-257249a28dc9
+Body: 
+{
+	"login":"s19022",
+	"Password":"ttt"
+}
+QueryString: 
+
+Method: GET
+Path: /
+Body: 
+
+QueryString: 
+
+Method: GET
+Path: /favicon.ico
+Body: 
+
+QueryString: 
+
+Method: POST
+Path: /api/students/token=42fce864-bb70-43d6-8a22-257249a28dc9
+Body: 
+{
+	"login":"s19022",
+	"Password":"ttt"
+}
+QueryString: 
+
+Method: GET
+Path: /
+Body: 
+
+QueryString: 
+
+Method: GET
+Path: /favicon.ico
+Body: 
+
+QueryString: 
+
+Method: POST
+Path: /api/students/token=42fce864-bb70-43d6-8a22-257249a28dc9
+Body: 
+{
+	"login":"s19022",
+	"Password":"ttt"
+}
+QueryString: 
+
+Method: POST
+Path: /api/students/token/42fce864-bb70-43d6-8a22-257249a28dc9
+Body: 
+{
+	"login":"s19022",
+	"Password":"ttt"
+}
+QueryString: 
+
+Method: GET
+Path: /
+Body: 
+
+QueryString: 
+
+Method: GET
+Path: /
+Body: 
+
+QueryString: 
+
+Method: GET
+Path: /favicon.ico
+Body: 
+
+QueryString: 
+
+Method: POST
+Path: /api/students/token/42FCE864-BB70-43D6-8A22-257249A28DC9
+Body: 
+{
+	"login":"s19022",
+	"Password":"ttt"
+}
+QueryString: 
+
+Method: GET
+Path: /
+Body: 
+
+QueryString: 
+
+Method: GET
+Path: /favicon.ico
+Body: 
+
+QueryString: 
+
+Method: POST
+Path: /api/students/token/42FCE864-BB70-43D6-8A22-257249A28DC9
+Body: 
+{
+	"login":"s19022",
+	"Password":"ttt"
+}
+QueryString: 
+
+Method: POST
+Path: /api/students/token/BD82AB55-3960-4F02-B3EA-D7730725B93C
+Body: 
+{
+	"login":"s19022",
+	"Password":"ttt"
+}
+QueryString: 
+
+Method: POST
+Path: /api/students/token/9568b8b4-f3e8-4db4-930b-42929ff22978
+Body: 
+{
+	"login":"s19022",
+	"Password":"ttt"
+}
+QueryString: 
+
+Method: POST
+Path: /api/students/token/9568b8b4-f3e8-4db4-930b-42929ff22978
+Body: 
+{
+	"login":"s19022",
+	"Password":"ttt"
+}
+QueryString: 
+
