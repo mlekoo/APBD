@@ -30,7 +30,7 @@ namespace OculusWebCrawler
 
 
                     if (data[1].ToLower() == "quest") { // data[1] = quest or Rift S
-                        if (validIfSended(data, true))
+                        if (validIfSended(data))
                         {
                             mailsForQuest.Add(data[0]);
                         }
@@ -38,7 +38,7 @@ namespace OculusWebCrawler
 
                     if (data[1].ToLower() == "rifts")
                     {
-                        if (validIfSended(data, false))
+                        if (validIfSended(data))
                         {
                             mailsForRiftS.Add(data[0]); // data[0] = emailAddress
                         }
@@ -60,16 +60,15 @@ namespace OculusWebCrawler
 
         }
 
-        public bool validIfSended(string[] userData, bool isQuest) {
+        public bool validIfSended(string[] userData) {
             var lines = File.ReadLines("../../../emails/usedEmails.txt");
-            var device = isQuest == true ? "quest" : "rifts";
             foreach (var line in lines) {
 
                 var data = line.Split(";");
                 
                 if(userData[0] == data[0])
                 {
-                    if (userData[1] == device)
+                    if (userData[1] == data[1])
                     {
                         if ((DateTime.Today - DateTime.Parse(data[2])).TotalDays <= 3)
                         {

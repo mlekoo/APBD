@@ -15,17 +15,19 @@ namespace OculusWebCrawler
     {
         public static async Task Main(string[] args)
         {
-
+            Console.WriteLine(Path.GetFullPath("../../../config/config.mycfg"));
+            Console.WriteLine(Path.GetFullPath("../../../emails/emails.txt"));
+            int iteration = 1;
             while (true)
             {
+                Console.WriteLine(iteration + " iteration...");
 
                 Configuration configuration = new Configuration("../../../config/config.mycfg");
 
-                Console.WriteLine(Path.GetFullPath("../../../config/config.mycfg"));
-
+                
                 EmailContainer emailContainer = new EmailContainer("../../../emails/emails.txt");
 
-                Console.WriteLine(Path.GetFullPath("../../../emails/emails.txt"));
+                
 
 
                 EmailConfiguration emailConfiguration = new EmailConfiguration("../../../emails/emailTitle.txt", "../../../emails/emailBody.txt");
@@ -47,26 +49,53 @@ namespace OculusWebCrawler
 
                             if (isQuestAvaliable(htmlContent))
                             {
-                                emailHandler.sendEmailsForQuest();
-                                Console.WriteLine("Sending emails for quest...");
+                                if (emailContainer.mailsForQuest.Count >= 1)
+                                {
+                                    Console.WriteLine("Sending emails for Quest... ");
+                                    Console.WriteLine("Emails count: " + emailContainer.mailsForQuest.Count);
+                                    emailHandler.sendEmailsForQuest();
+                                    Console.WriteLine("Emails sended...");
+                                }
+                                else
+                                {
+                                    Console.WriteLine("No emails for Quest awaiting...");
+                                }
                             }
+
+                            Console.WriteLine();
 
                             if (isRiftSAvaliable(htmlContent))
                             {
-                                emailHandler.sendEmailsForRiftS();
-                                Console.WriteLine("Sending emails for rifts...");
+                                if (emailContainer.mailsForRiftS.Count >= 1)
+                                {
+                                    Console.WriteLine("Sending emails for RiftS... ");
+                                    Console.WriteLine("Emails count: " + emailContainer.mailsForRiftS.Count);
+                                    emailHandler.sendEmailsForRiftS();
+                                    Console.WriteLine("Emails sended...");
+
+                                }
+                                else {
+                                    Console.WriteLine("No emails for RiftS awaiting...");
+                                }
 
                             }
                         }
                     }
                 }
+                Console.WriteLine();
+                Console.WriteLine("Iteration " + iteration + " completed...");
+                iteration++;
+                Console.WriteLine("Waiting 60 seconds...");
+                Console.WriteLine();
+                Console.WriteLine();
+                Console.WriteLine();
                 Thread.Sleep(60000);
             }
         }
 
         public static bool isQuestAvaliable(string htmlContent) {
 
-            var regex = new Regex("\"Oculus Quest\",\"key\":\"questparent\",\"active\":true", RegexOptions.IgnoreCase);
+            var regex = new Regex("\"Oculus Quest\",\"key\":\"questparent\",\"active\":false", RegexOptions.IgnoreCase);
 
             var matches = regex.Matches(htmlContent);
 
@@ -80,7 +109,7 @@ namespace OculusWebCrawler
 
         public static bool isRiftSAvaliable(string htmlContent) {
 
-            var regex = new Regex("\"Oculus Rift S\",\"key\":\"rift-s-parent\",\"active\":true", RegexOptions.IgnoreCase);
+            var regex = new Regex("\"Oculus Rift S\",\"key\":\"rift-s-parent\",\"active\":false", RegexOptions.IgnoreCase);
 
             var matches = regex.Matches(htmlContent);
 

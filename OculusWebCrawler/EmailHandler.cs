@@ -28,9 +28,6 @@ namespace OculusWebCrawler
             SmtpClient SmtpServer = new SmtpClient(configuration.smtpClient);
             mail.From = new MailAddress(configuration.mailAddress);
 
-            Console.WriteLine(emailContainer.mailsForQuest.Count);
-            Console.WriteLine(emailContainer.mailsForRiftS.Count);
-
             foreach (var email in emailContainer.mailsForQuest)
             {
                 mail.To.Add(email);
