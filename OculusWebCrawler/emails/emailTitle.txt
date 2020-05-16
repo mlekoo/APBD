@@ -1,0 +1,2 @@
+quest:Twój Oculus Quest jest dostępny na stronie www.oculus.com
+rifts:Twój Oculus Rift S jest dostępny na stronie www.oculus.com
