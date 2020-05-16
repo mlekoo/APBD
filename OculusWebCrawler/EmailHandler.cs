@@ -28,10 +28,11 @@ namespace OculusWebCrawler
             SmtpClient SmtpServer = new SmtpClient(configuration.smtpClient);
             mail.From = new MailAddress(configuration.mailAddress);
 
+            StringBuilder sb = new StringBuilder();
             foreach (var email in emailContainer.mailsForQuest)
             {
                 mail.To.Add(email);
-                File.AppendAllText("../../../emails/usedEmails.txt", email + ";quest;" + DateTime.Today + "\n");
+                sb.Append(email + ";quest;" + DateTime.Today + "\n");
             }
 
             mail.Subject = emailConfiguration.mailForQuestTitle;
@@ -43,8 +44,15 @@ namespace OculusWebCrawler
 
 
             ServicePointManager.ServerCertificateValidationCallback = delegate (object s, X509Certificate certificate, X509Chain chain, SslPolicyErrors sslPolicyErrors) { return true; };
+            try
+            {
+                SmtpServer.Send(mail);
+                File.AppendAllText("../../../emails/usedEmails.txt", sb.ToString());
+            }
+            catch (IOException e) {
+                Console.WriteLine(e);
+            }
 
-            SmtpServer.Send(mail);
 
         }
 
@@ -54,11 +62,11 @@ namespace OculusWebCrawler
             SmtpClient SmtpServer = new SmtpClient(configuration.smtpClient);
             mail.From = new MailAddress(configuration.mailAddress);
 
+            StringBuilder sb = new StringBuilder();
             foreach (var email in emailContainer.mailsForRiftS)
             {
                 mail.To.Add(email);
-
-                File.AppendAllText("../../../emails/usedEmails.txt", email + ";rifts;" + DateTime.Today + "\n");
+                sb.Append(email + ";rifts;" + DateTime.Today + "\n");
             }
 
             mail.Subject = emailConfiguration.mailForRiftSTitle;
@@ -69,8 +77,15 @@ namespace OculusWebCrawler
             SmtpServer.EnableSsl = true;
 
             ServicePointManager.ServerCertificateValidationCallback = delegate (object s, X509Certificate certificate, X509Chain chain, SslPolicyErrors sslPolicyErrors) { return true; };
-
-            SmtpServer.Send(mail);
+            try
+            {
+                SmtpServer.Send(mail);
+                File.AppendAllText("../../../emails/usedEmails.txt", sb.ToString());
+            }
+            catch (IOException e)
+            {
+                Console.WriteLine(e);
+            }
 
         }
 
