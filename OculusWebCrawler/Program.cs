@@ -13,14 +13,29 @@ namespace OculusWebCrawler
 {
     public class Program
     {
+        public static string today = DateTime.Today.ToShortDateString().Replace("/", "-");
         public static async Task Main(string[] args)
         {
-            Console.WriteLine(Path.GetFullPath("../../../config/config.mycfg"));
-            Console.WriteLine(Path.GetFullPath("../../../emails/emails.txt"));
+            log("Running... " + DateTime.Now);
+            log("");
             int iteration = 1;
             while (true)
             {
-                Console.WriteLine(iteration + " iteration...");
+                if (today != DateTime.Today.ToShortDateString().Replace("/", "-")) {
+                    today = DateTime.Today.ToShortDateString().Replace("/", "-");
+                }
+
+
+
+                if (!File.Exists("../../../emails/errorLog_" + today + ".txt")){
+                    File.WriteAllText("../../../emails/errorLog_" + today + ".txt", "");
+                    if (iteration == 1) {
+                        log(Path.GetFullPath("../../../config/config.mycfg"));
+                        log(Path.GetFullPath("../../../emails/emails.txt"));
+                    }
+                }
+
+                log(iteration + " iteration...");
 
                 Configuration configuration = new Configuration("../../../config/config.mycfg");
 
@@ -51,44 +66,52 @@ namespace OculusWebCrawler
                             {
                                 if (emailContainer.mailsForQuest.Count >= 1)
                                 {
-                                    Console.WriteLine("Sending emails for Quest... ");
-                                    Console.WriteLine("Emails count: " + emailContainer.mailsForQuest.Count);
+                                    log("Sending emails for Quest... ");
+                                    log("Emails count: " + emailContainer.mailsForQuest.Count);
                                     emailHandler.sendEmailsForQuest();
-                                    Console.WriteLine("Emails sended...");
+                                    log("Emails sended...");
                                 }
                                 else
                                 {
-                                    Console.WriteLine("No emails for Quest awaiting...");
+                                    log("No emails for Quest awaiting...");
                                 }
                             }
+                            else
+                            {
+                                log("Quest is unavaliable on oculus site...");
+                            }
 
-                            Console.WriteLine();
+                            log("");
 
                             if (isRiftSAvaliable(htmlContent))
                             {
                                 if (emailContainer.mailsForRiftS.Count >= 1)
                                 {
-                                    Console.WriteLine("Sending emails for RiftS... ");
-                                    Console.WriteLine("Emails count: " + emailContainer.mailsForRiftS.Count);
+                                    log("Sending emails for RiftS... ");
+                                    log("Emails count: " + emailContainer.mailsForRiftS.Count);
                                     emailHandler.sendEmailsForRiftS();
-                                    Console.WriteLine("Emails sended...");
+                                    log("Emails sended...");
 
                                 }
                                 else {
-                                    Console.WriteLine("No emails for RiftS awaiting...");
+                                    log("No emails for RiftS awaiting...");
                                 }
 
+                            }
+                            else
+                            {
+                                log("RiftS is unavaliable on oculus site...");
                             }
                         }
                     }
                 }
-                Console.WriteLine();
-                Console.WriteLine("Iteration " + iteration + " completed...");
+                log("");
+                log("Iteration " + iteration + " completed...");
                 iteration++;
-                Console.WriteLine("Waiting 60 seconds...");
-                Console.WriteLine();
-                Console.WriteLine();
-                Console.WriteLine();
+                log("Waiting 60 seconds...");
+                log("");
+                log("");
+                log("");
                 Thread.Sleep(60000);
             }
         }
@@ -120,6 +143,10 @@ namespace OculusWebCrawler
             return false;
         }
 
+        public static void log(string text) {
+            Console.WriteLine(text);
+            File.AppendAllText("../../../emails/errorLog_" + today + ".txt", text + "\n");
+        }
 
         
     }

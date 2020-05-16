@@ -51,6 +51,7 @@ namespace OculusWebCrawler
             }
             catch (IOException e) {
                 Console.WriteLine(e);
+                
             }
 
 
