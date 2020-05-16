@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Net;
 using System.Net.Mail;
 using System.Threading;
+using System.IO;
 
 namespace OculusWebCrawler
 {
@@ -20,7 +21,12 @@ namespace OculusWebCrawler
 
                 Configuration configuration = new Configuration("../../../config/config.mycfg");
 
+                Console.WriteLine(Path.GetFullPath("../../../config/config.mycfg"));
+
                 EmailContainer emailContainer = new EmailContainer("../../../emails/emails.txt");
+
+                Console.WriteLine(Path.GetFullPath("../../../emails/emails.txt"));
+
 
                 EmailConfiguration emailConfiguration = new EmailConfiguration("../../../emails/emailTitle.txt", "../../../emails/emailBody.txt");
 
