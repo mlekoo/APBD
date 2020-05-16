@@ -117,6 +117,7 @@ namespace OculusWebCrawler
                 }
                 catch (Exception e) {
                     log(e.ToString());
+                    log(DateTime.Now.ToString());
                 }
                 Thread.Sleep(60000);
             }
