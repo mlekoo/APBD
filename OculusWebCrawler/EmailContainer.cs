@@ -28,13 +28,20 @@ namespace OculusWebCrawler
 
                 if (validDate(data[2])) { // data[2] = valid_to_date
 
+
                     if (data[1].ToLower() == "quest") { // data[1] = quest or Rift S
-                        mailsForQuest.Add(data[0]);
+                        if (validIfSended(data, true))
+                        {
+                            mailsForQuest.Add(data[0]);
+                        }
                     }
 
                     if (data[1].ToLower() == "rifts")
                     {
-                        mailsForRiftS.Add(data[0]); // data[0] = emailAddress
+                        if (validIfSended(data, false))
+                        {
+                            mailsForRiftS.Add(data[0]); // data[0] = emailAddress
+                        }
                     }
 
                 }
@@ -44,13 +51,37 @@ namespace OculusWebCrawler
         }
 
         public bool validDate(string date) {
-            if (DateTime.Parse(date) <= DateTime.UtcNow)
+            if (DateTime.Parse(date) >= DateTime.UtcNow)
             {
                 return true;
             }
 
             return false;
 
+        }
+
+        public bool validIfSended(string[] userData, bool isQuest) {
+            var lines = File.ReadLines("../../../emails/usedEmails.txt");
+            var device = isQuest == true ? "quest" : "rifts";
+            foreach (var line in lines) {
+
+                var data = line.Split(";");
+                
+                if(userData[0] == data[0])
+                {
+                    if (userData[1] == device)
+                    {
+                        if ((DateTime.Today - DateTime.Parse(data[2])).TotalDays <= 3)
+                        {
+                            return false;
+                        }
+                    }
+
+                }
+            }
+
+            return true;
+            
         }
 
     }

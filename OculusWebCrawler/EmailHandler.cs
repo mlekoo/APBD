@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Net;
 using System.Net.Mail;
 using System.Net.Security;
@@ -27,9 +28,13 @@ namespace OculusWebCrawler
             SmtpClient SmtpServer = new SmtpClient(configuration.smtpClient);
             mail.From = new MailAddress(configuration.mailAddress);
 
+            Console.WriteLine(emailContainer.mailsForQuest.Count);
+            Console.WriteLine(emailContainer.mailsForRiftS.Count);
+
             foreach (var email in emailContainer.mailsForQuest)
             {
                 mail.To.Add(email);
+                File.AppendAllText("../../../emails/usedEmails.txt", email + ";quest;" + DateTime.Today + "\n");
             }
 
             mail.Subject = emailConfiguration.mailForQuestTitle;
@@ -55,6 +60,8 @@ namespace OculusWebCrawler
             foreach (var email in emailContainer.mailsForRiftS)
             {
                 mail.To.Add(email);
+
+                File.AppendAllText("../../../emails/usedEmails.txt", email + ";rifts;" + DateTime.Today + "\n");
             }
 
             mail.Subject = emailConfiguration.mailForRiftSTitle;

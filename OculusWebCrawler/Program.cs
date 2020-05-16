@@ -66,7 +66,7 @@ namespace OculusWebCrawler
 
         public static bool isQuestAvaliable(string htmlContent) {
 
-            var regex = new Regex("\"Oculus Quest\",\"key\":\"questparent\",\"active\":true", RegexOptions.IgnoreCase);
+            var regex = new Regex("\"Oculus Quest\",\"key\":\"questparent\",\"active\":false", RegexOptions.IgnoreCase);
 
             var matches = regex.Matches(htmlContent);
 
