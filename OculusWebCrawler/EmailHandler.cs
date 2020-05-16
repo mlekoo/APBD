@@ -50,8 +50,7 @@ namespace OculusWebCrawler
                 File.AppendAllText("../../../emails/usedEmails.txt", sb.ToString());
             }
             catch (IOException e) {
-                Console.WriteLine(e);
-                
+                Program.log(e.ToString());
             }
 
 
@@ -85,7 +84,7 @@ namespace OculusWebCrawler
             }
             catch (IOException e)
             {
-                Console.WriteLine(e);
+                Program.log(e.ToString());
             }
 
         }

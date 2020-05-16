@@ -51,74 +51,80 @@ namespace OculusWebCrawler
 
 
 
-
-                var url = "http://oculus.com/compare";
-
-                using (var httpClient = new HttpClient())
+                try
                 {
-                    using (var response = await httpClient.GetAsync(url))
-                    {
-                        if (response.IsSuccessStatusCode)
-                        {
-                            var htmlContent = await response.Content.ReadAsStringAsync();
+                    var url = "http://oculus.com/compare";
 
-                            if (isQuestAvaliable(htmlContent))
+                    using (var httpClient = new HttpClient())
+                    {
+                        using (var response = await httpClient.GetAsync(url))
+                        {
+                            if (response.IsSuccessStatusCode)
                             {
-                                if (emailContainer.mailsForQuest.Count >= 1)
+                                var htmlContent = await response.Content.ReadAsStringAsync();
+
+                                if (isQuestAvaliable(htmlContent))
                                 {
-                                    log("Sending emails for Quest... ");
-                                    log("Emails count: " + emailContainer.mailsForQuest.Count);
-                                    emailHandler.sendEmailsForQuest();
-                                    log("Emails sended...");
+                                    if (emailContainer.mailsForQuest.Count >= 1)
+                                    {
+                                        log("Sending emails for Quest... ");
+                                        log("Emails count: " + emailContainer.mailsForQuest.Count);
+                                        emailHandler.sendEmailsForQuest();
+                                        log("Emails sended...");
+                                    }
+                                    else
+                                    {
+                                        log("No emails for Quest awaiting...");
+                                    }
                                 }
                                 else
                                 {
-                                    log("No emails for Quest awaiting...");
+                                    log("Quest is unavaliable on oculus site...");
                                 }
-                            }
-                            else
-                            {
-                                log("Quest is unavaliable on oculus site...");
-                            }
 
-                            log("");
+                                log("");
 
-                            if (isRiftSAvaliable(htmlContent))
-                            {
-                                if (emailContainer.mailsForRiftS.Count >= 1)
+                                if (isRiftSAvaliable(htmlContent))
                                 {
-                                    log("Sending emails for RiftS... ");
-                                    log("Emails count: " + emailContainer.mailsForRiftS.Count);
-                                    emailHandler.sendEmailsForRiftS();
-                                    log("Emails sended...");
+                                    if (emailContainer.mailsForRiftS.Count >= 1)
+                                    {
+                                        log("Sending emails for RiftS... ");
+                                        log("Emails count: " + emailContainer.mailsForRiftS.Count);
+                                        emailHandler.sendEmailsForRiftS();
+                                        log("Emails sended...");
+
+                                    }
+                                    else
+                                    {
+                                        log("No emails for RiftS awaiting...");
+                                    }
 
                                 }
-                                else {
-                                    log("No emails for RiftS awaiting...");
+                                else
+                                {
+                                    log("RiftS is unavaliable on oculus site...");
                                 }
-
-                            }
-                            else
-                            {
-                                log("RiftS is unavaliable on oculus site...");
                             }
                         }
                     }
+                    log("");
+                    log("Iteration " + iteration + " completed... " + DateTime.Now);
+                    iteration++;
+                    log("Waiting 60 seconds...");
+                    log("");
+                    log("");
+                    log("");
                 }
-                log("");
-                log("Iteration " + iteration + " completed...");
-                iteration++;
-                log("Waiting 60 seconds...");
-                log("");
-                log("");
-                log("");
+                catch (Exception e) {
+                    log(e.ToString());
+                }
                 Thread.Sleep(60000);
             }
         }
 
         public static bool isQuestAvaliable(string htmlContent) {
 
-            var regex = new Regex("\"Oculus Quest\",\"key\":\"questparent\",\"active\":true", RegexOptions.IgnoreCase);
+            var regex = new Regex("\"Oculus Quest\",\"key\":\"questparent\",\"active\":false", RegexOptions.IgnoreCase);
 
             var matches = regex.Matches(htmlContent);
 
@@ -132,7 +138,7 @@ namespace OculusWebCrawler
 
         public static bool isRiftSAvaliable(string htmlContent) {
 
-            var regex = new Regex("\"Oculus Rift S\",\"key\":\"rift-s-parent\",\"active\":true", RegexOptions.IgnoreCase);
+            var regex = new Regex("\"Oculus Rift S\",\"key\":\"rift-s-parent\",\"active\":false", RegexOptions.IgnoreCase);
 
             var matches = regex.Matches(htmlContent);
 
