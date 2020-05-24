@@ -8,6 +8,9 @@ using System.Net;
 using System.Net.Mail;
 using System.Threading;
 using System.IO;
+using System.Net.Sockets;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
 
 namespace OculusWebCrawler
 {
@@ -16,9 +19,13 @@ namespace OculusWebCrawler
         public static string today = DateTime.Today.ToShortDateString().Replace("/", "-");
         public static async Task Main(string[] args)
         {
-            log("Running... " + DateTime.Now);
-            log("");
-            int iteration = 1;
+
+          
+                            
+
+                            log("Running... " + DateTime.Now);
+                                        log("");
+                                        int iteration = 1;
             while (true)
             {
                 if (today != DateTime.Today.ToShortDateString().Replace("/", "-")) {
@@ -27,7 +34,7 @@ namespace OculusWebCrawler
 
 
 
-                if (!File.Exists("../../../emails/errorLog_" + today + ".txt")){
+                if (!File.Exists("../../../emails/errorLog_" + today + ".txt")) {
                     File.WriteAllText("../../../emails/errorLog_" + today + ".txt", "");
                     if (iteration == 1) {
                         log(Path.GetFullPath("../../../config/config.mycfg"));
@@ -39,74 +46,62 @@ namespace OculusWebCrawler
 
                 Configuration configuration = new Configuration("../../../config/config.mycfg");
 
-                
                 EmailContainer emailContainer = new EmailContainer("../../../emails/emails.txt");
-
-                
-
 
                 EmailConfiguration emailConfiguration = new EmailConfiguration("../../../emails/emailTitle.txt", "../../../emails/emailBody.txt");
 
                 EmailHandler emailHandler = new EmailHandler(configuration, emailConfiguration, emailContainer);
 
-
-
                 try
                 {
-                    var url = "http://oculus.com/compare";
 
-                    using (var httpClient = new HttpClient())
+                    using (IWebDriver driver = new ChromeDriver())
                     {
-                        using (var response = await httpClient.GetAsync(url))
-                        {
-                            if (response.IsSuccessStatusCode)
+                        driver.Navigate().GoToUrl("https://www.oculus.com/compare/?locale=pl_PL");
+
+                        if (isQuestAvaliable(driver)){
+                            if (emailContainer.mailsForQuest.Count >= 1)
                             {
-                                var htmlContent = await response.Content.ReadAsStringAsync();
-
-                                if (isQuestAvaliable(htmlContent))
-                                {
-                                    if (emailContainer.mailsForQuest.Count >= 1)
-                                    {
-                                        log("Sending emails for Quest... ");
-                                        log("Emails count: " + emailContainer.mailsForQuest.Count);
-                                        emailHandler.sendEmailsForQuest();
-                                        log("Emails sended...");
-                                    }
-                                    else
-                                    {
-                                        log("No emails for Quest awaiting...");
-                                    }
-                                }
-                                else
-                                {
-                                    log("Quest is unavaliable on oculus site...");
-                                }
-
-                                log("");
-
-                                if (isRiftSAvaliable(htmlContent))
-                                {
-                                    if (emailContainer.mailsForRiftS.Count >= 1)
-                                    {
-                                        log("Sending emails for RiftS... ");
-                                        log("Emails count: " + emailContainer.mailsForRiftS.Count);
-                                        emailHandler.sendEmailsForRiftS();
-                                        log("Emails sended...");
-
-                                    }
-                                    else
-                                    {
-                                        log("No emails for RiftS awaiting...");
-                                    }
-
-                                }
-                                else
-                                {
-                                    log("RiftS is unavaliable on oculus site...");
-                                }
+                                log("Sending emails for Quest... ");
+                                log("Emails count: " + emailContainer.mailsForQuest.Count);
+                                emailHandler.sendEmailsForQuest();
+                                log("Emails sended...");
+                            }
+                            else
+                            {
+                                log("No emails for Quest awaiting...");
                             }
                         }
-                    }
+                        else
+                        {
+                            log("Quest is unavaliable on oculus site...");
+                        }
+
+                        log("");
+
+                        if (isRiftSAvaliable(driver))
+                        {
+                            if (emailContainer.mailsForRiftS.Count >= 1)
+                            {
+                                log("Sending emails for RiftS... ");
+                                log("Emails count: " + emailContainer.mailsForRiftS.Count);
+                                emailHandler.sendEmailsForRiftS();
+                                log("Emails sended...");
+
+                            }
+                            else
+                            {
+                                log("No emails for RiftS awaiting...");
+                            }
+
+                        }
+                        else
+                        {
+                            log("RiftS is unavaliable on oculus site...");
+                        }
+                        
+
+                    
                     log("");
                     log("Iteration " + iteration + " completed... " + DateTime.Now);
                     iteration++;
@@ -114,6 +109,7 @@ namespace OculusWebCrawler
                     log("");
                     log("");
                     log("");
+                    }
                 }
                 catch (Exception e) {
                     log(e.ToString());
@@ -123,31 +119,22 @@ namespace OculusWebCrawler
             }
         }
 
-        public static bool isQuestAvaliable(string htmlContent) {
+        public static bool isQuestAvaliable(IWebDriver driver) {
 
-            var regex = new Regex("\"Oculus Quest\",\"key\":\"questparent\",\"active\":true", RegexOptions.IgnoreCase);
+            if(driver.FindElements(By.XPath("//*[@id=\"compare\"]/div[2]/section/div/div[2]/div/div[2]/div/div[2]/span")).Count == 0) return true;
 
-            var matches = regex.Matches(htmlContent);
-
-            foreach (var match in matches)
-            {
-                return true;
-            }
-
-            return false;
+            if (driver.FindElement(By.XPath("//*[@id=\"compare\"]/div[2]/section/div/div[2]/div/div[2]/div/div[2]/span")).Text == "Produkt niedostępny") return false;
+            
+            return true;
         }
 
-        public static bool isRiftSAvaliable(string htmlContent) {
+        public static bool isRiftSAvaliable(IWebDriver driver) {
 
-            var regex = new Regex("\"Oculus Rift S\",\"key\":\"rift-s-parent\",\"active\":true", RegexOptions.IgnoreCase);
+            if (driver.FindElements(By.XPath("//*[@id=\"compare\"]/div[2]/section/div/div[2]/div/div[3]/div/div[2]/span")).Count == 0) return true;
 
-            var matches = regex.Matches(htmlContent);
+            if (driver.FindElement(By.XPath("//*[@id=\"compare\"]/div[2]/section/div/div[2]/div/div[3]/div/div[2]/span")).Text == "Produkt niedostępny") return false;
 
-            foreach (var match in matches)
-            {
-                return true;
-            }
-            return false;
+            return true;
         }
 
         public static void log(string text) {
